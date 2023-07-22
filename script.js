@@ -59,5 +59,6 @@ weather.addEventListener('submit', (e) => {
           </div>
         </div>`;
   }
+
   getWeatherData();
 });
