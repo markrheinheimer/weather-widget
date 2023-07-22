@@ -2,6 +2,13 @@ const weather = document.querySelector('.weather');
 const goButton = document.querySelector('.submit-btn');
 const displayWeather = document.querySelector('.display-weather');
 
+goButton.addEventListener('click', () => {
+  goButton.classList.add('clicked');
+  setTimeout(() => {
+    goButton.classList.remove('clicked');
+  }, 200);
+});
+
 weather.addEventListener('submit', (e) => {
   e.preventDefault();
   const city = cityField.value;
@@ -44,7 +51,7 @@ weather.addEventListener('submit', (e) => {
           <div class="description">
             <p></p>
             <p>${weatherInfo.description}</p>
-            <p>Temp: ${weatherInfo.temperature}</p>
+            <p>Temp: ${weatherInfo.temperature} F</p>
             <p>Humidity: ${weatherInfo.humidity} %</p>
           </div>
           <div class="icon">

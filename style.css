@@ -1,8 +1,8 @@
 h1 {
-  color: rgb(169, 67, 67);
+  color: rgb(201, 51, 51);
   text-align: center;
   margin-bottom: 9px;
-  margin-top: 6px;
+  margin-top: 2px;
 }
 
 h2 {
@@ -31,7 +31,7 @@ p {
   color: rgb(27, 27, 27);
   text-align: center;
   left: 11px;
-  top: 48px;
+  top: 45px;
 }
 
 .city-field {
@@ -50,6 +50,12 @@ p {
   padding: 4px 10px;
   border: 2px solid;
   border-color: rgb(111, 111, 111);
+  transition: transform 0.3s;
+  transform: scale(1);
+}
+
+.clicked {
+  transform: scale(0.95);
 }
 
 .submit-btn:hover {
@@ -67,8 +73,8 @@ p {
 }
 
 img {
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
 }
 
 .description {
