@@ -43,10 +43,14 @@ weather.addEventListener('submit', (e) => {
 
   function displayWeatherInfo(weatherInfo) {
     const weatherDiv = document.querySelector('.display-weather');
+    const cityState = document.querySelector('.city-state');
+    const app = document.querySelector('.app');
 
-    displayWeather.style.marginTop = '25px';
+    app.style.height = '180px';
 
-    weatherDiv.innerHTML = `<h2 class="display-header">${weatherInfo.city}, ${weatherInfo.state}</h2>
+    cityState.innerText = `${weatherInfo.city}, ${weatherInfo.state}`;
+
+    weatherDiv.innerHTML = `
         <div class="description-icon">
 
           <div class="description">
@@ -68,8 +72,9 @@ weather.addEventListener('submit', (e) => {
     console.log(close);
 
     close.addEventListener('click', () => {
-      displayWeather.style.marginTop = '0px';
       weatherDiv.innerHTML = '';
+      app.style.height = '45px';
+      cityState.innerText = '';
     });
   }
 
