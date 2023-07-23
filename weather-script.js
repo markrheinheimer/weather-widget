@@ -46,7 +46,7 @@ weather.addEventListener('submit', (e) => {
     const cityState = document.querySelector('.city-state');
     const app = document.querySelector('.app');
 
-    app.style.height = '180px';
+    app.style.height = '190px';
 
     cityState.innerText = `${weatherInfo.city}, ${weatherInfo.state}`;
 
