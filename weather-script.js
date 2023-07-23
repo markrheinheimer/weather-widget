@@ -27,7 +27,7 @@ weather.addEventListener('submit', (e) => {
           city: data.location.name,
           state: data.location.region,
           description: data.current.condition.text,
-          temperature: data.current.temp_f,
+          temperature: Math.round(data.current.temp_f),
           humidity: data.current.humidity,
           icon: data.current.condition.icon,
         };
@@ -48,16 +48,29 @@ weather.addEventListener('submit', (e) => {
 
     weatherDiv.innerHTML = `<h2 class="display-header">${weatherInfo.city}, ${weatherInfo.state}</h2>
         <div class="description-icon">
+
           <div class="description">
             <p></p>
             <p>${weatherInfo.description}</p>
-            <p>Temp: ${weatherInfo.temperature} F</p>
-            <p>Humidity: ${weatherInfo.humidity} %</p>
+            <p>Temp: ${weatherInfo.temperature}F</p>
+            <p>Humidity: ${weatherInfo.humidity}%</p>
           </div>
+
           <div class="icon">
             <img src="${weatherInfo.icon}" alt="sadf" />
           </div>
+
+          <i src="./img/x-solid.svg" class="fa-solid fa-x" id="close"></i>  
+
         </div>`;
+
+    const close = document.getElementById('close');
+    console.log(close);
+
+    close.addEventListener('click', () => {
+      displayWeather.style.marginTop = '0px';
+      weatherDiv.innerHTML = '';
+    });
   }
 
   getWeatherData();
