@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather-style.css" />
+    <script src="weather-script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/268946be24.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="app-move">
+      <div class="app">
+        <h1>WeatherWhiz</h1>
+        <div class="city-zipcode">
+          <form action="" class="weather">
+            <label for="cityField"></label>
+            <input
+              type="text"
+              min="10000"
+              max="99999"
+              id="cityField"
+              class="city-field"
+              placeholder="Enter City or Zipcode"
+            />
+            <button type="submit" class="submit-btn">GO</button>
+          </form>
+        </div>
+        <h2 class="city-state"></h2>
+
+        <div class="display-weather"></div>
+      </div>
+    </div>
+  </body>
+</html>
